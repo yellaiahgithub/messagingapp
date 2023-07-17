@@ -22,12 +22,12 @@
     "zod": "^3.19.1"
   },
   "scripts": {
-    "start": "npm run db-migrations && npm run seed && node src/index.js",
+    "start": "npm run db-migrations && npm run seed && node build/src/index.js",
     "db-migrations": "prisma migrate deploy",
     "dev": "ts-node-dev --respawn --transpile-only --exit-child src/index.ts",
     "test": "jest",
     "build": "tsc",
-    "seed": "ts-node prisma/seed.js"
+    "seed": "ts-node prisma/seed.ts"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
